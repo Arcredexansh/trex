@@ -66,8 +66,9 @@ function setup() {
 
 function draw() {
   background(180);
-  if (keyDown("space") && trex.y >= 100 && gameserve != RESET) {
+  if ((keyDown("space")|| touches.length>0) && trex.y >= 100 && gameserve != RESET) {
     trex.velocityY = -10;
+    touches = [];
     gameserve = PLAY;
   }
 
